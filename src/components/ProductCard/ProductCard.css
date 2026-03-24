@@ -1,0 +1,10 @@
+
+
+.compra{
+    display: flex;
+    justify-content: space-around;
+}
+
+.compra button{
+    color: #fff;
+}

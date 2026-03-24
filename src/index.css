@@ -1,0 +1,24 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color:  #fcefe0;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #b17810;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.253);
+}

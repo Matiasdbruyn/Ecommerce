@@ -1,0 +1,25 @@
+#root {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+h1{
+  margin: 0;
+}
+
+h2{
+  margin: 0;
+}
+
+h3{
+  margin: 0;
+}
+
+p{
+  margin: 0;
+}
+
+main{
+  height: 100vh;
+}
