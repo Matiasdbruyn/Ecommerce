@@ -1,0 +1,10 @@
+.conteinerDescrip{
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteinerDescrip .status{
+    font-size: 20px;
+}

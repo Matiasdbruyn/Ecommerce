@@ -1,10 +1,52 @@
-
-
-.compra{
-    display: flex;
-    justify-content: space-around;
+.item-card__stock {
+    margin: 0;
+    padding: 10px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.699);
 }
 
-.compra button{
+.item-card__stock.is-empty {
+    color: rgba(255, 0, 0, 0.699);
+}
+
+.h4 {
+    padding: 10px;
+    margin: 0;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.555);
+}
+
+.description {
+    text-align: left;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.compra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.compra .pcompra {
+    text-align: left;
+    font-weight: 400;
+    padding: 10px;
+}
+
+.compra .bbutton {
+    width: 40%;
+    font-family: "Montserrat", sans-serif;
     color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: #c46f0f;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 20px;
 }

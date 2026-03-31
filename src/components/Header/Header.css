@@ -1,0 +1,51 @@
+.header {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 7vh;
+}
+
+.header .logo{
+	font-size: 22px;
+	font-weight: 400;
+	color: black;
+	text-decoration: none;
+}
+
+.header nav {
+	display: flex;
+	gap: 16px;
+	flex-wrap: wrap;
+	font-weight: 500;
+}
+
+.nav__link {
+	padding: 6px 12px;
+	border-radius: 999px;
+	background: #fff;
+	border: 1px solid transparent;
+	transition: border-color 0.2s ease, transform 0.2s ease;
+	color: black;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: 400;
+}
+
+.nav__link:hover {
+	transform: translateY(-1px);
+}
+
+.nav__link--active {
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.203);
+	transform: translateY(-1px);
+}
+
+.header .carrito {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header .carrito .theme-button{
+	margin-left: 20px;
+}

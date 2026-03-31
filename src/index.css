@@ -1,6 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color:  #fcefe0;
+  font-family: "Prompt";
 }
 
 body {
@@ -14,11 +13,57 @@ button {
   font-size: 15px;
   font-weight: 500;
   font-family: inherit;
-  background-color: #b17810;
+  background-color: #c46f0f;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 
 button:hover {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.253);
+}
+
+.light {
+  background-color: #fcefe0;
+  color: #1f1f1f;
+  min-height: 100vh;
+}
+
+.dark {
+  background-color: #1f1f1f;
+  min-height: 100vh;
+}
+
+.light .theme-button {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+.dark .theme-button {
+  background-color: #ffffff;
+  color: #1f1f1f;
+}
+
+.dark .header .logo {
+  color: #fff;
+}
+
+.dark .producto-lista-header h2 {
+  color: #fff;
+}
+
+.dark .card-container {
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.253);
+}
+
+.dark .nav__link--active {
+  box-shadow: 5px 5px 10px rgba(253, 253, 253, 0.203);
+}
+
+.dark .conteinerDescrip .status {
+  color: #fff;
+}
+
+.dark .detail {
+  background-color: #fcefe0;
+  box-shadow: 10px 10px 10px rgba(253, 253, 253, 0.203);
 }

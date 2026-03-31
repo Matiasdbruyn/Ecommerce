@@ -1,12 +1,11 @@
 import "./Card.css"
 
-function Card(props) {
-    console.log(props)
+function Card({imagen, children}) {
     return (
         <div className="card-container">
-            <h3>aca tiene que ir la imagen, no h3</h3>
+            <img src={imagen} alt="" />
             <div className="card-content">
-                {!props.children?"No hay contenido para mostrar":props.children}
+                {!children?"No hay contenido para mostrar":children}
             </div>
         </div>
     )

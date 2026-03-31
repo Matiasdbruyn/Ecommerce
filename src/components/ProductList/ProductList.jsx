@@ -1,56 +1,61 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProductCard from "../ProductCard/ProductCard.jsx"
 import "./ProductList.css"
+import { getProducts, getProductsByCategory } from "../Lista.js";
+import { useParams } from "react-router-dom";
 
-const Productos = [
-    {
-        id: 1,
-        name: "Samsung",
-        description:"aca va texzto description",
-        price: 4.000,
-    },
-    {
-        id: 2,
-        name: "Iphone",
-        description:"aca va texzto description",
-        price: 5.000,
-    },
-    {
-        id: 3,
-        name: "Motorola",
-        description:"aca va texzto description",
-        price: 3.000,
-    },
-    {
-        id: 4,
-        name: "Xiaomi",
-        description:"aca va texzto description",
-        price: 2.000,
-    },
-    {
-        id: 5,
-        name: "Nokia",
-        description:"aca va texzto description",
-        price: 1.000,
-    },
-]
+function ProductList({
+    greetings = "Nuestros productos",
+}) {
 
-function ProductList({añadirCarrito}) {
-    const [products] = useState(Productos)
+    const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(true)
+    const { categoryId } = useParams()
+
+    useEffect(() => {
+        const asyncFunction = categoryId ? getProductsByCategory : getProducts
+        asyncFunction(categoryId)
+            .then((res) => {
+                setProducts(res)
+            })
+            .catch((err) => {
+                console.log("Error al obtener los productos", err)
+            })
+            .finally(() => {
+                setLoading(false)
+            })
+    }, [categoryId])
+
     return (
-        <div className="producto-lista">
-            {products.map((item) => (
-                <ProductCard
-                    key={item.id}
-                    name={item.name}
-                    description={item.description}
-                    price={item.price}
-                    añadirCarrito={() => añadirCarrito(item)}
-                >
-                    <p>Producto ID: {item.id}</p>
-                </ProductCard>
-            ))}
-        </div>
+
+        <section className='producto-lista'>
+            <header className='producto-lista-header'>
+                <h2>{greetings}</h2>
+            </header>
+            <div className="ProductCard">
+                {loading
+                    ? (
+                        <div className='estado'>Cargando productos....</div>)
+                    : products.length === 0 ? (
+                        <div className='estado'>No hay productos disponibles </div>
+                    ) : (
+                        products.map((item) => (
+                            <ProductCard
+                                key={item.id}
+                                id={item.id}
+                                category={item.category}
+                                description={item.description}
+                                price={item.price}
+                                imagen={item.imagen}
+                                stock={item.stock}
+                            >
+                            </ProductCard>
+                        )
+                        )
+                    )
+                }
+            </div>
+        </section>
     )
 }
 
