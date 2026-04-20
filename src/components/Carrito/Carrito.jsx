@@ -1,6 +1,6 @@
 import "./Carrito.css"
 
-function Carrito(cardcount) {
+function Carrito({cartCount}) {
     return (
         <button
             type="button"
