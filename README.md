@@ -1,16 +1,59 @@
-# React + Vite
+# E-Commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación moderna de comercio electrónico diseñada exclusivamente para consumidores del cafe, construida con React y Firebase.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Catálogo de Productos**: Navegación fluida por categorías (cafe molido grueso, medio, grano entero).
+- **Detalle de Producto**: Información completa sobre cada artículo.
+- **Carrito de Compras**: Gestión de pedidos de forma intuitiva.
 
-## React Compiler
+## Tecnologías Utilizadas
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- **Frontend**: [React.js](https://reactjs.org/) (v19)
+- **Bundler**: [Vite](https://vitejs.dev/)
+- **Routing**: [React Router](https://reactrouter.com/) (v7)
+- **Backend / Database**: [Firebase](https://firebase.google.com/) (Firestore & Auth)
+- **Estilos**: CSS3 moderno (Vanilla CSS)
+- **Despliegue**: GitHub Pages con Automatización mediante GitHub Actions.
 
-## Expanding the ESLint configuration
+## Instalación y Uso
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clonar el repositorio**:
+
+   ```bash
+   git clone https://github.com/Matiasdbruyn/Ecommerce
+   ```
+
+2. **Entrar en la carpeta del proyecto**:
+
+   ```bash
+   cd "ecommerce"
+   ```
+
+3. **Instalar dependencias**:
+
+   ```bash
+   npm install
+   ```
+
+4. **Iniciar en modo desarrollo**:
+   ```bash
+   npm run dev
+   ```
+
+## Estructura del Proyecto
+
+```text
+src/
+├── components/        # Componentes reutilizables
+├── context/           # Contextos para estado global
+├── firebase/          # Configuración y servicios de Firebase
+├── assets/            # Imágenes y recursos estáticos
+├── App.jsx            # Configuración de rutas principales
+└── main.jsx           # Punto de entrada de la aplicación
+```
+
+---
+
+_Desarrollado por [Matias De Bruyn](https://github.com/Matiasdbruyn)_
